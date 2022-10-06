@@ -1,3 +1,4 @@
+import { HTMLInputTypeAttribute } from 'react';
 import { SubmitHandler, FieldValues } from 'react-hook-form';
 
 type FieldSchema = {
@@ -12,6 +13,7 @@ type DefaultProps = {
 export type TextFieldProps = FieldSchema &
   DefaultProps & {
     type: 'text';
+    htmlType?: HTMLInputTypeAttribute;
   };
 
 export type Field = TextFieldProps;

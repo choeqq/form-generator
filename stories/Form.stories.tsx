@@ -25,4 +25,16 @@ const Template: Story<FormProps> = args => <Form {...args} />;
 // https://storybook.js.org/docs/react/workflows/unit-testing
 export const Default = Template.bind({});
 
-Default.args = {};
+const fields: FormProps['fields'] = {
+  email: {
+    type: 'text',
+    label: 'email',
+  },
+};
+
+Default.args = {
+  fields,
+  onSubmit: v => {
+    console.log(`Values: `, v);
+  },
+};
