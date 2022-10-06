@@ -34,6 +34,32 @@ const fields: FormProps['fields'] = {
     type: 'number',
     label: 'count',
   },
+  myArray: {
+    type: 'array',
+    label: 'My array',
+    itemField: {
+      type: 'text',
+      label: 'Array text',
+    },
+  },
+  kv: {
+    type: 'array',
+    label: 'Headers',
+    itemField: {
+      type: 'object',
+      label: 'Header fields',
+      properties: {
+        key: {
+          type: 'text',
+          label: 'Key',
+        },
+        value: {
+          type: 'text',
+          label: 'value',
+        },
+      },
+    },
+  },
   myObj: {
     type: 'object',
     label: 'count',

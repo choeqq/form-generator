@@ -29,7 +29,17 @@ export type ObjectFieldProps = FieldSchema &
     properties: Fields;
   };
 
-export type Field = TextFieldProps | NumberFieldProps | ObjectFieldProps;
+export type ArrayFieldProps = FieldSchema &
+  DefaultProps & {
+    type: 'array';
+    itemField: Field;
+  };
+
+export type Field =
+  | TextFieldProps
+  | NumberFieldProps
+  | ObjectFieldProps
+  | ArrayFieldProps;
 
 type Fields = Record<string, Field>;
 
