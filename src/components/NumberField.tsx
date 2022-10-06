@@ -1,13 +1,12 @@
 import React from 'react';
 import { useFormContext } from 'react-hook-form';
-import { TextFieldProps } from '../types';
+import { NumberFieldProps } from '../types';
 
-function TextField({
+function NumberField({
   label,
   name,
-  htmlType = 'text',
   placeholder,
-}: TextFieldProps & { name: string }) {
+}: NumberFieldProps & { name: string }) {
   const { register } = useFormContext();
 
   return (
@@ -15,7 +14,7 @@ function TextField({
       <label htmlFor={name}>{label}</label>
       <input
         id={name}
-        type={htmlType}
+        type="number"
         placeholder={placeholder}
         {...register(name)}
       />
@@ -23,4 +22,4 @@ function TextField({
   );
 }
 
-export default TextField;
+export default NumberField;

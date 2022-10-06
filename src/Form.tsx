@@ -1,11 +1,15 @@
 import React from 'react';
 import { FormProvider, useForm } from 'react-hook-form';
+import NumberField from './components/NumberField';
 import TextField from './components/TextField';
 import { Field, FormProps } from './types';
 
 function renderFields([name, fieldProps]: [string, Field]) {
   if (fieldProps.type === 'text') {
     return <TextField {...fieldProps} name={name} />;
+  }
+  if (fieldProps.type === 'number') {
+    return <NumberField {...fieldProps} name={name} />;
   }
 
   return <div>Uknown type {fieldProps.type}</div>;

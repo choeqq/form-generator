@@ -30,6 +30,10 @@ const fields: FormProps['fields'] = {
     type: 'text',
     label: 'email',
   },
+  count: {
+    type: 'number',
+    label: 'count',
+  },
 };
 
 Default.args = {

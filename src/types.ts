@@ -16,7 +16,14 @@ export type TextFieldProps = FieldSchema &
     htmlType?: HTMLInputTypeAttribute;
   };
 
-export type Field = TextFieldProps;
+export type NumberFieldProps = FieldSchema &
+  DefaultProps & {
+    type: 'number';
+    min?: number;
+    max?: number;
+  };
+
+export type Field = TextFieldProps | NumberFieldProps;
 
 type Fields = Record<string, Field>;
 
