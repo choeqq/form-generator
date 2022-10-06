@@ -35,7 +35,6 @@ function ArrayField({
   name,
   itemField,
   label,
-  type,
 }: ArrayFieldProps & { name: string }) {
   const { control } = useFormContext();
 
