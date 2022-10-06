@@ -23,7 +23,13 @@ export type NumberFieldProps = FieldSchema &
     max?: number;
   };
 
-export type Field = TextFieldProps | NumberFieldProps;
+export type ObjectFieldProps = FieldSchema &
+  DefaultProps & {
+    type: 'object';
+    properties: Fields;
+  };
+
+export type Field = TextFieldProps | NumberFieldProps | ObjectFieldProps;
 
 type Fields = Record<string, Field>;
 

@@ -34,6 +34,17 @@ const fields: FormProps['fields'] = {
     type: 'number',
     label: 'count',
   },
+  myObj: {
+    type: 'object',
+    label: 'count',
+    properties: {
+      mySubObj: {
+        type: 'text',
+        label: 'my sub prop',
+        htmlType: 'email',
+      },
+    },
+  },
 };
 
 Default.args = {
